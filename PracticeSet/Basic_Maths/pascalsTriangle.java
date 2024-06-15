@@ -1,13 +1,26 @@
 package PracticeSet.Basic_Maths;
-
+import java.util.* ;
 public class pascalsTriangle {
     public static void main(String[] args) {
-        int i = 10;
-        Integer in1 = new Integer(i);
-        Integer in2 = new Integer(10);
-        Integer in3 = new Integer("10");
-        System.out.println(in1);
-        System.out.println(in2);
-        System.out.println(in3);
+        int n = 5 ;
+        System.out.println(generate(n));
+    }
+    public static List<List<Integer>> generate(int numRows) {
+        return find(numRows);
+    }
+    public static List<List<Integer>> find(int num){
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> ls ;
+        for(int n = 0 ; n < num ; n++){
+            ls = new ArrayList<>();
+            int nCr = 1 ;
+            for(int r = 0 ; r <= n ; r++){
+                ls.add(nCr) ;
+                nCr = ((n - r) * nCr ) / (r+1);
+            }
+            res.add(ls);
+        }
+        return res ;
+
     }
 }
