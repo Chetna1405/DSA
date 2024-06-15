@@ -1,7 +1,7 @@
 package PracticeSet.Arrays;
 import java.util.* ;
 //Array Reversal Algorithm
-public class Array {
+public class ReversalAlgorithm {
    public static void main(String[] args) {
         int[] arr ={1,2,3,4,5,6};
         int k = 3 ;
